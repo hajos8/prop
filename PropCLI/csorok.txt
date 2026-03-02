@@ -1,0 +1,8 @@
+sorszám;kihelyezés_dátuma;párt;plakát_szélesség_m;plakát_hosszúság_m;plakát_szöveg
+21;2011.05.05;ÚJ PÁRT;2,0;1,0;Új kezdet, új arcok
+14;2018.03.22;CIVIL;1,2;1,5;Közösség az első
+13;2019.11.11;FÜGGETLEN;2,0;2,0;Helyi ügyek, helyi hang
+12;2020.06.14;Együtt;1,8;2,5;Változtatni kell — most!
+11;2021.09.30;Mi Hazánk;3,0;4,0;Hagyomány és erő
+10;2022.01.15;Párbeszéd;2,4;3,2;Tegyünk együtt a jövőért
+8;2024.07.01;LMP;1,5;2,0;Zöld Magyarország — tiszta levegő, tiszta jövő

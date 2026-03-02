@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.propgui.PropController">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="Fájl">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#fileOpener" text="Megnyitás">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#exitPlatform" text="Kilépés" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Súgó">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleAbout" text="Névjegy" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <RadioButton fx:id="part" mnemonicParsing="false" selected="true" text="Párt" onAction="#fillUp">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="radio" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="datum" mnemonicParsing="false" text="Dátum" toggleGroup="$radio" onAction="#fillUp" />
+               </children>
+            </HBox>
+              <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0">
+                  <items>
+                      <VBox maxWidth="200.0" minHeight="300.0" minWidth="200.0" prefWidth="200.0">
+                          <children>
+                              <ListView fx:id="left_list" maxWidth="200.0" minHeight="450.0" minWidth="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" onMouseClicked="#showData" />
+                          </children>
+                  </VBox>
+                      <VBox prefHeight="200.0" prefWidth="100.0">
+                          <children>
+                              <ListView fx:id="right_list" minHeight="450.0" minWidth="400.0" VBox.vgrow="ALWAYS" onMouseClicked="#showData" />
+                          </children>
+                  </VBox>
+                  </items>
+              </SplitPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
